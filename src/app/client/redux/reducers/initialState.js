@@ -25,5 +25,12 @@ export default {
     }
   ],
   bank: '',
-  transactions: []
+  transactions: [],
+  form: {
+    surname: '',
+    sortCode: '',
+    accountNumber: '',
+    passCode: '',
+    memorableWord: ''
+  }
 };

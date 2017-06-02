@@ -1,36 +1,13 @@
 import React from 'react';
 import { Layout, Button } from '../../components';
+import initialState from '../../redux/reducers/initialState.js';
 import * as Paths from '../../constants/paths';
 
-const bankList = [{
-  name: 'Barclays',
-  logo: require('../../../static/images/Barclays.png')
-},
-  {
-    name: 'Natwest',
-    logo: require('../../../static/images/LogoNatwest.png')
-  },
-  {
-    name: 'Lloyds',
-    logo: require('../../../static/images/LogoLloyds.png')
-  },
-  {
-    name: 'HSBC',
-    logo: require('../../../static/images/LogoHSBC.png')
-  },
-  {
-    name: 'TSB',
-    logo: require('../../../static/images/LogoTSB.png')
-  },
-  {
-    name: 'Santander',
-    logo: require('../../../static/images/LogoSantander.png')
-  }
-];
+const bankList = initialState.bankList;
 
 const ChooseBankPage = (props) => {
   return (
-    <Layout>
+    <Layout title="Chose your bank">
       <div className="main-content">
         <h1>Which bank does this account belong to?</h1>
         <p>Track all of your payments by connecting as many bank accounts as you'd like to your Nopa<br />
@@ -38,7 +15,7 @@ const ChooseBankPage = (props) => {
 
         <div className="bank-list">
             {
-              bankList.map(bank => <div ><img alt={bank.name} src={bank.logo} /></div>)
+              bankList.map(bank => <div key={bank.name}><img alt={bank.name} src={bank.logo} /></div>)
             }
         </div>
 
@@ -47,6 +24,6 @@ const ChooseBankPage = (props) => {
       </div>
     </Layout>
   );
-}
+};
 
 export default ChooseBankPage;

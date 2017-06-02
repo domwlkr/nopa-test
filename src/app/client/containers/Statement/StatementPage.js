@@ -3,7 +3,11 @@ import { Layout } from '../../components';
 
 const StatementPage = (props) => {
   return (
-    <Layout></Layout>
+    <Layout>
+      <div className="main-content">
+        
+      </div>
+    </Layout>
   );
 }
 
