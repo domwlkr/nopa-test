@@ -1,0 +1,15 @@
+.bank-list {
+  width: 100%;
+  max-width: 336px;
+  margin: 25px auto 20px;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+@media (min-width:380px) {
+  .bank-list {
+    margin: 50px auto 25px;
+  }
+}

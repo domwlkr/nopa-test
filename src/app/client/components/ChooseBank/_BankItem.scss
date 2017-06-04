@@ -1,0 +1,20 @@
+.bank-item {
+  background-color: white;
+  padding: 10px;
+  height: 90px;
+  width: 46%;
+  justify-content: center;
+  align-items: center;
+  margin: 5px;
+  display: flex;
+
+  > img {
+    filter: grayscale(100%);
+    width: 100%;
+    justify-content: center;
+
+    &.selected {
+      filter: grayscale(0%);
+    }
+  }
+}
