@@ -2,6 +2,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 import { Layout, LoginForm } from '../../components';
 import { formSubmitSuccess } from '../../redux/actions/formActions';
+import { browserHistory } from 'react-router';
 
 class LoginPage extends React.Component {
   constructor(props) {
@@ -36,6 +37,7 @@ class LoginPage extends React.Component {
     if (!this.validate()) return;
 
     this.props.formSubmit(this.state.formData);
+    browserHistory.push('/statement');
   }
 
   validate() {

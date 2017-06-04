@@ -2,6 +2,7 @@ import React, { PropTypes } from 'react';
 import { connect } from 'react-redux';
 import { Layout, ChooseBankContent } from '../../components';
 import { bankSelect } from '../../redux/actions/bankActions';
+import { browserHistory } from 'react-router';
 
 class ChooseBankPage extends React.Component {
   constructor(props) {
@@ -9,7 +10,8 @@ class ChooseBankPage extends React.Component {
     this.selectBank = this.selectBank.bind(this);
     this.chooseBank = this.chooseBank.bind(this);
     this.state = {
-      selectedBank: ''
+      selectedBank: '',
+      error: ''
     };
   }
 
@@ -20,6 +22,12 @@ class ChooseBankPage extends React.Component {
 
   chooseBank(e) {
     e.preventDefault();
+    if (this.props.bank === undefined) {
+      this.setState({error: 'Please select a bank'});
+    }
+    else {
+      browserHistory.push('/login');
+    }
   }
 
   render() {
@@ -27,7 +35,8 @@ class ChooseBankPage extends React.Component {
       <Layout title="Chose your bank">
         <ChooseBankContent onSelectBank={this.selectBank}
           onContinue={this.chooseBank}
-          selectedBank={this.state.selectedBank} />
+          selectedBank={this.state.selectedBank}
+          error={this.state.error} />
       </Layout>
     );
   }

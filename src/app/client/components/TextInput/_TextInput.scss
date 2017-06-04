@@ -1,9 +1,7 @@
-.errors {
-
-}
-
 .form-input {
-  margin: 20px;
+  margin: 20px auto 50px;
+  max-width: 330px;
+  position: relative;
 
   label {
     display: none;
@@ -11,9 +9,18 @@
 
   input {
     padding: 10px;
-    min-width: 300px;
+    width: 100%;
+    max-width: 330px;
     border: 0;
     border-radius:1px;
     border-bottom: 3px solid lightgray;
+  }
+
+  .errors {
+    position: absolute;
+    width: 100%;
+    left: 50%;
+    top: calc(100% + 10px);
+    transform: translateX(-50%);
   }
 }

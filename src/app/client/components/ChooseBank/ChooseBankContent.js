@@ -14,7 +14,9 @@ const ChooseBankContent = (props) => {
 
       <BankList bankList={bankList} selectedBank={props.selectedBank} onSelectBank={props.onSelectBank} />
 
-      <Button to={Paths.LOGIN_BANK} onClick={props.onContinue} className="button">Get started</Button>
+      <div className="error">{props.error}</div> 
+
+      <Button onClick={props.onContinue} className="button">Continue</Button>
 
     </div>
   );
