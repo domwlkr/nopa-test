@@ -1,8 +1,10 @@
 import React, { PropTypes} from 'react';
 
 const BankItem = (props) => {
+  console.log(props.isSelected);
+
   return (
-    <li className="bank-item" onClick={() => props.onSelectBank(props.bank)}>
+    <li className={"bank-item " + (props.isSelected ? 'selected' : '')} onClick={() => props.onSelectBank(props.bank)}>
       <img className="bank-image" alt={props.bank.name} src={props.bank.logo} />
     </li>
   )

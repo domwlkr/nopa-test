@@ -3,7 +3,7 @@ import BankItem from './BankItem';
 
 const BankList = (props) => {
   const banks = props.bankList.map((bank) => (
-    <BankItem key={bank.id} bank={bank} onSelectBank={props.onSelectBank} />
+    <BankItem isSelected={bank.name==props.selectedBank} key={bank.id} bank={bank} onSelectBank={props.onSelectBank} />
   ));
 
   return (

@@ -8,10 +8,14 @@ class ChooseBankPage extends React.Component {
     super(props);
     this.selectBank = this.selectBank.bind(this);
     this.chooseBank = this.chooseBank.bind(this);
+    this.state = {
+      selectedBank: ''
+    };
   }
 
   selectBank(bank) {
     this.props.bankSelect(bank);
+    this.setState({selectedBank: bank.name});
   }
 
   chooseBank(e) {
@@ -22,7 +26,8 @@ class ChooseBankPage extends React.Component {
     return (
       <Layout title="Chose your bank">
         <ChooseBankContent onSelectBank={this.selectBank}
-          onContinue={this.chooseBank} />
+          onContinue={this.chooseBank}
+          selectedBank={this.state.selectedBank} />
       </Layout>
     );
   }
