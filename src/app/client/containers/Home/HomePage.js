@@ -1,5 +1,5 @@
 import React from 'react';
-import { Layout, Button, HomeIntro, HomeSecondary } from '../../components';
+import { Layout, HomeIntro, HomeSecondary } from '../../components';
 import { Link } from 'react-router';
 
 const HomePage = (props) => {

@@ -1,29 +1,47 @@
-import React from 'react';
-import { Layout, Button } from '../../components';
-import initialState from '../../redux/reducers/initialState.js';
-import * as Paths from '../../constants/paths';
+import React, { PropTypes } from 'react';
+import { connect } from 'react-redux';
+import { Layout, ChooseBankContent } from '../../components';
+import { bankSelect } from '../../redux/actions/bankActions';
 
-const bankList = initialState.bankList;
+class ChooseBankPage extends React.Component {
+  constructor(props) {
+    super(props);
+    this.selectBank = this.selectBank.bind(this);
+    this.chooseBank = this.chooseBank.bind(this);
+  }
 
-const ChooseBankPage = (props) => {
-  return (
-    <Layout title="Chose your bank">
-      <div className="main-content">
-        <h1>Which bank does this account belong to?</h1>
-        <p>Track all of your payments by connecting as many bank accounts as you'd like to your Nopa<br />
-          account and get updates on your balance instantly.</p>
+  selectBank(bank) {
+    this.props.bankSelect(bank);
+  }
 
-        <div className="bank-list">
-            {
-              bankList.map(bank => <div key={bank.name}><img alt={bank.name} src={bank.logo} /></div>)
-            }
-        </div>
+  chooseBank(e) {
+    e.preventDefault();
+  }
 
-        <Button to={Paths.LOGIN_BANK} className="button">Get started</Button>
+  render() {
+    return (
+      <Layout title="Chose your bank">
+        <ChooseBankContent onSelectBank={this.selectBank}
+          onContinue={this.chooseBank} />
+      </Layout>
+    );
+  }
+}
 
-      </div>
-    </Layout>
-  );
+const mapStateToProps = (state) => {
+  const { bankReducer } = state;
+  const { bank } = bankReducer;
+  return {
+    bank
+  };
 };
 
-export default ChooseBankPage;
+const mapDispatchToEvents = (dispatch) => {
+  return {
+    bankSelect: (bank) => {
+      dispatch(bankSelect(bank));
+    }
+  };
+};
+
+export default connect(mapStateToProps, mapDispatchToEvents)(ChooseBankPage);
