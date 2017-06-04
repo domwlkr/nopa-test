@@ -1,14 +1,16 @@
-import React from 'react';
+import React, {PropTypes} from 'react';
 import { Link } from 'react-router';
 
 const Button = (props) => {
   return (
-    <div className="">
-      <Link {...props} className="button">
-        {props.children}
-      </Link>
-    </div>
-  )
+    <Link {...props} className="button">
+      {props.children}
+    </Link>
+  );
+};
+
+Button.propTypes = {
+  buttonClass: PropTypes.string
 };
 
 export default Button;

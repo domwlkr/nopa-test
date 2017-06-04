@@ -3,11 +3,16 @@ import initialState from './initialState.js';
 
 export default function formReducer(state = initialState.form, action) {
   switch(action.type) {
-    case types.FORM_SUBMIT:
-      return [
-        ...state,
-        Object.assign({}, action.form)
-      ];
+    case types.FORM_SUBMIT_SUCCESS:
+      return {
+        loggedIn: true,
+        formValues: action.formValues
+      };
+    case types.LOGOUT_SUCCESS:
+      return {
+        loggedIn: false,
+        formValues: {}
+      };
     default:
       return state;
   }

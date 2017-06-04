@@ -19,17 +19,19 @@ const partners = [{
 ];
 
 const partnerLogos = partners.map((partner) =>
-    <div><img className="Nopa" alt={partner.name} src={partner.logo} /></div>
+    <div className="partner" key={partner.name}><img alt={partner.name} src={partner.logo} /></div>
 );
 
 const Partners = (props) => {
   return (
     <section className="partners">
       <div>
-        <span>Our partners:</span>
-      </div>
-      <div>
-        {partnerLogos}
+        <div>
+          <span>Our partners:</span>
+        </div>
+        <div>
+          {partnerLogos}
+        </div>
       </div>
     </section>
   );

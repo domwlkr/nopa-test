@@ -13,7 +13,6 @@ const TextInput = (props) => {
         type="text"
         placeholder={props.label}
         onChange={props.handleChange}
-        onBlur={props.handleBlur}
         data-error={props.errors} />
       <div className="errors">{props.errors}</div>
     </div>
@@ -24,7 +23,6 @@ TextInput.propTypes = {
   name: React.PropTypes.string.isRequired,
   label: React.PropTypes.string.isRequired,
   handleChange: React.PropTypes.func.isRequired,
-  handleBlur: React.PropTypes.func.isRequired,
   password: React.PropTypes.bool,
   errors: React.PropTypes.string
 };

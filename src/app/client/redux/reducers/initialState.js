@@ -1,8 +1,9 @@
 export default {
-  bankList: [{
-    name: 'Barclays',
-    logo: require('../../../static/images/Barclays.png')
-  },
+  bankList: [
+    {
+      name: 'Barclays',
+      logo: require('../../../static/images/Barclays.png')
+    },
     {
       name: 'Natwest',
       logo: require('../../../static/images/LogoNatwest.png')
@@ -27,10 +28,7 @@ export default {
   bank: '',
   transactions: [],
   form: {
-    surname: '',
-    sortCode: '',
-    accountNumber: '',
-    passCode: '',
-    memorableWord: ''
+    formData: {},
+    loggedIn: false
   }
 };

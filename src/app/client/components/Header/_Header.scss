@@ -1,11 +1,30 @@
 .header {
+  background: white;
   display: flex;
   justify-content: space-between;
-  margin: 10px;
+
   .logo {
-
+    height: 55px;
+    margin: 6px 0 5px 9px;
   }
-  .signin {
 
+  .login {
+    margin: 9px 16px 11px 0;
+  }
+}
+
+@media (min-width:380px) {
+  .header {
+    background-color: transparent;
+    margin: 10px;
+    flex-direction: row-reverse;
+
+    .logo {
+      display: none;
+    }
+
+    .login {
+      align-self: flex-end;
+    }
   }
 }

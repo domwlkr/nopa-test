@@ -1,7 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import { Layout, LoginForm } from '../../components';
-import { formSubmitSuccess } from '../../redux/actions/formSubmitActions';
+import { formSubmitSuccess } from '../../redux/actions/formActions';
 
 class LoginPage extends React.Component {
   constructor(props) {
@@ -35,7 +35,7 @@ class LoginPage extends React.Component {
 
     if (!this.validate()) return;
 
-
+    this.props.formSubmit(this.state.formData);
   }
 
   validate() {
@@ -89,12 +89,21 @@ class LoginPage extends React.Component {
   }
 }
 
+const mapStateToProps = (state) => {
+  const { formReducer } = state;
+  const { form } = formReducer;
+
+  return {
+    form
+  };
+};
+
 const mapDispatchToEvents = (dispatch) => {
   return {
-    login: (details) => {
+    formSubmit: (details) => {
       dispatch(formSubmitSuccess(details));
     }
   };
 };
 
-export default LoginPage;
+export default connect(mapStateToProps, mapDispatchToEvents)(LoginPage);

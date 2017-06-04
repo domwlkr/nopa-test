@@ -1,0 +1,24 @@
+.home-intro {
+  .logo {
+    display: none;
+  }
+
+  p {
+    font-size: 1.063rem;
+    color: white;
+    max-width: 600px;
+    margin: 0 auto 1rem;
+  }
+}
+
+@media (min-width:380px) {
+  .home-intro {
+    .logo {
+      display: block;
+    }
+
+    p {
+      font-size: 1.25rem;
+    }
+  }
+}
