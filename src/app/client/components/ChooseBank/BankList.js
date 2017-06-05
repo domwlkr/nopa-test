@@ -16,6 +16,6 @@ const BankList = (props) => {
 BankList.proptypes = {
   bankList: PropTypes.array.isRequired,
   onSelectBank: PropTypes.func.isRequired
-}
+};
 
 export default BankList;

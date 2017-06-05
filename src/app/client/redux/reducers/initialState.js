@@ -24,7 +24,5 @@ export default {
       name: 'Santander',
       logo: require('../../../static/images/LogoSantander.png')
     }
-  ],
-  bank: '',
-  form: { formData: {}, loggedIn: false }
+  ]
 };

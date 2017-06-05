@@ -27,7 +27,7 @@
   }
 }
 
-@media (min-width:380px) {
+@include media(380px) {
   .partners {
     flex-wrap: nowrap;
     text-align: left;

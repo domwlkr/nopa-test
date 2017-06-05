@@ -2,9 +2,9 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { logoutSuccess } from '../../redux/actions/formActions';
 import { Header, Footer, Partners } from '../';
+import { browserHistory } from 'react-router';
 
 class Layout extends React.Component {
-
   constructor(props) {
     super(props);
     this.logOut = this.logOut.bind(this);
@@ -15,14 +15,15 @@ class Layout extends React.Component {
   }
 
   logOut() {
-    
+    this.props.logout();
+    browserHistory.push('/');
   }
 
   render () {
     return (
       <section>
         <Header loggedIn={this.props.loggedIn}
-          onLoginClick={this.logIn}
+          bank={this.props.bank}
           onLogoutClick={this.logOut} />
         <div className="layout">
           {this.props.children}
@@ -39,10 +40,9 @@ Layout.propTypes = {
 };
 
 const mapStateToProps = (state) => {
-  const { formReducer } = state;
-  const { loggedIn } = formReducer;
   return {
-    loggedIn
+    loggedIn: state.formReducer.form.loggedIn,
+    bank: state.bankReducer.bank
   };
 };
 

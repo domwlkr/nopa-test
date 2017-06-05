@@ -8,7 +8,7 @@
   justify-content: center;
 }
 
-@media (min-width:380px) {
+@include media(380px) {
   .bank-list {
     margin: 50px auto 25px;
   }

@@ -1,17 +1,23 @@
 import * as types from './actionTypes';
 
-export const formSubmitSuccess = (formValues) => ({
+export function formSubmitSuccess(formValues) {
+  return {
     type: types.FORM_SUBMIT_SUCCESS,
     loggedIn: true,
-    formValues
-});
+    payload: formValues
+  };
+}
 
-export const formSubmitFail = () => ({
+export function formSubmitFail() {
+  return {
     type: types.FORM_SUBMIT_FAIL,
     loggedIn: false
-});
+  };
+}
 
-export const logoutSuccess = () => ({
+export function logoutSuccess() {
+  return {
     type: types.LOGOUT_SUCCESS,
     loggedIn: false
-});
+  };
+}

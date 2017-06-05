@@ -1,0 +1,19 @@
+.table-wrap {
+  text-align: center;
+  max-width: 505px;
+  margin: 0 auto 30px;
+
+  span {
+    color: white;
+  }
+}
+
+.transactions-table {
+
+}
+
+@include media(380px) {
+  .table-wrap {
+    text-align: left;
+  }
+}

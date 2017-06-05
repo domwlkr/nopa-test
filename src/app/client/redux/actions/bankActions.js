@@ -1,6 +1,8 @@
 import * as types from './actionTypes';
 
-export const bankSelect = (bank) => ({
+export function bankSelect(bank) {
+  return {
     type: types.BANK_SELECT,
-    bank
-});
+    payload: bank
+  };
+}

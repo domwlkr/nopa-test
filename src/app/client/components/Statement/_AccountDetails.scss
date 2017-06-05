@@ -1,0 +1,30 @@
+.account-details {
+  color: white;
+  display: flex;
+  max-width: 370px;
+  margin: 0 auto 30px;
+
+  span {
+    display: block;
+    font-size: 1.25rem;
+  }
+}
+
+.account-details__left {
+  text-align: left;
+  width: 50%;
+  flex: 1;
+}
+
+.account-details__right {
+  text-align: right;
+  width: 50%;
+  flex: 1;
+}
+
+@include media(380px) {
+  .account-details {
+    border: 1px solid white;
+    padding: 15px 20px;
+  }
+}

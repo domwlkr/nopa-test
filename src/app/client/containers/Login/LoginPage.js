@@ -23,6 +23,10 @@ class LoginPage extends React.Component {
     this.handleChange = this.handleChange.bind(this);
   }
 
+  componentWillMount() {
+    if (this.props.bank.name === undefined) browserHistory.push('/choose-bank');
+  }
+
   handleChange(e) {
     let newState = this.state;
 
@@ -92,11 +96,9 @@ class LoginPage extends React.Component {
 }
 
 const mapStateToProps = (state) => {
-  const { formReducer } = state;
-  const { form } = formReducer;
-
   return {
-    form
+    loggedIn: state.formReducer.form.loggedIn,
+    bank: state.bankReducer.bank
   };
 };
 

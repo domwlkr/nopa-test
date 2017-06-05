@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { Layout, StatementContent } from '../../components';
 import { getTransactions, getTransactionsSuccess, getTransactionsFail } from '../../redux/actions/transactionActions';
+import { browserHistory } from 'react-router';
 
 class StatementPage extends React.Component {
   constructor(props) {
@@ -9,6 +10,8 @@ class StatementPage extends React.Component {
   }
 
   componentWillMount() {
+    // if (!this.props.loggedIn) browserHistory.push('/');
+
     this.props.getTransactions();
   }
 
@@ -19,7 +22,11 @@ class StatementPage extends React.Component {
   render() {
     return (
       <Layout title="Statement">
-        <StatementContent onClickshowMore={this.showMore} />
+        <StatementContent onClickshowMore={this.showMore}
+          bank={this.props.bank}
+          accountDetails={this.props.accountDetails}
+          transactions={this.props.transactions}
+          loading={this.props.loading} />
       </Layout>
     );
   }
@@ -28,17 +35,18 @@ class StatementPage extends React.Component {
 const mapStateToProps = (state) => {
   return {
     transactions: state.transactionReducer.transactions,
-    loading: state.transactionReducer.loading
+    loading: state.transactionReducer.loading,
+    accountDetails: state.formReducer.form.formData,
+    loggedIn: state.formReducer.form.loggedIn,
+    bank: state.bankReducer.bank
   };
 };
 
 const mapDispatchToProps = (dispatch) => {
   return {
     getTransactions: () => {
-      return dispatch(getTransactions()).then((response) => {
+      dispatch(getTransactions()).then((response) => {
         let data = response.payload.data ? response.payload.data : {data : 'Network Error'};
-
-        console.log(data);
 
         !response.error ? dispatch(getTransactionsSuccess(data)) : dispatch(getTransactionsFail(data));
       });

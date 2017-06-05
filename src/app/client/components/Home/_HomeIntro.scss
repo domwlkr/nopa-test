@@ -11,7 +11,7 @@
   }
 }
 
-@media (min-width:380px) {
+@include media(380px) {
   .home-intro {
     .logo {
       display: block;

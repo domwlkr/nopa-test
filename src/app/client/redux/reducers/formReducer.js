@@ -1,18 +1,23 @@
 import * as types from '../actions/actionTypes';
-import initialState from './initialState.js';
 
-export default function formReducer(state = initialState.form, action) {
+const INITIAL_STATE = { form: { formData: {}, loggedIn: false, errors: {} } };
+
+export default function formReducer(state = INITIAL_STATE, action) {
   switch(action.type) {
     case types.FORM_SUBMIT_SUCCESS:
-      return {
-        loggedIn: true,
-        formValues: action.formValues
-      };
+      return Object.assign({}, state, {
+        form: {
+          formData: action.payload,
+          loggedIn: true
+        }
+      });
     case types.LOGOUT_SUCCESS:
-      return {
-        loggedIn: false,
-        formValues: {}
-      };
+      return Object.assign({}, state, {
+        form:{
+          loggedIn: false,
+          formValues: {}
+        }
+      });
     default:
       return state;
   }
