@@ -13,6 +13,7 @@
   },
   "author": "Issa Shabo <issa.shabo@zopa.com>",
   "dependencies": {
+    "axios": "^0.16.2",
     "babel-polyfill": "6.8.0",
     "bootstrap": "3.3.6",
     "css-loader": "^0.27.3",
@@ -24,6 +25,7 @@
     "react-redux": "4.4.5",
     "react-router": "^2.4.0",
     "redux": "3.5.2",
+    "redux-promise": "^0.5.3",
     "redux-thunk": "2.0.1",
     "style-loader": "^0.14.1",
     "url-loader": "^0.5.8"
