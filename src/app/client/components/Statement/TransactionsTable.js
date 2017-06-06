@@ -1,9 +1,9 @@
-import React from 'react';
+import React, {PropTypes} from 'react';
 import TransactionDate from './TransactionDate';
 
 const TransactionsTable = (props) => {
-  const datesFiltered = props.transactions.transactions !== undefined 
-    ? props.transactions.transactions.reduce((result, current) => {
+  const datesFiltered = props.transactions !== undefined 
+    ? props.transactions.reduce((result, current) => {
       result[current.dateStr] = result[current.dateStr] || [];
       result[current.dateStr].push(current );
       return result;
@@ -26,10 +26,14 @@ const TransactionsTable = (props) => {
     <div className="table-wrap">
       <span>Your transactions for the last 30 days</span>
       <div className="transactions-table">
-
+        {transactionDatesBlocks}
       </div>
     </div>
   );
+};
+
+TransactionsTable.propTypes = {
+  transactions: PropTypes.array
 };
 
 export default TransactionsTable;

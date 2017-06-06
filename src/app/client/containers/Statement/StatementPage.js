@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {PropTypes} from 'react';
 import { connect } from 'react-redux';
 import { Layout, StatementContent } from '../../components';
 import { getTransactions, getTransactionsSuccess, getTransactionsFail } from '../../redux/actions/transactionActions';
@@ -32,6 +32,14 @@ class StatementPage extends React.Component {
   }
 }
 
+StatementPage.propTypes = {
+  accountDetails: PropTypes.object,
+  loading: PropTypes.bool,
+  bank: PropTypes.object,
+  showMore: PropTypes.func,
+  transactions: PropTypes.array
+};
+
 const mapStateToProps = (state) => {
   return {
     transactions: state.transactionReducer.transactions,
@@ -46,7 +54,7 @@ const mapDispatchToProps = (dispatch) => {
   return {
     getTransactions: () => {
       dispatch(getTransactions()).then((response) => {
-        let data = response.payload.data ? response.payload.data : {data : 'Network Error'};
+        let data = response.payload.data ? response.payload.data.transactions : {data : 'Network Error'};
 
         !response.error ? dispatch(getTransactionsSuccess(data)) : dispatch(getTransactionsFail(data));
       });
