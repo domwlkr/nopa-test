@@ -4,7 +4,7 @@ import { logoutSuccess } from '../../redux/actions/formActions';
 import { Header, Footer, Partners } from '../';
 import { browserHistory } from 'react-router';
 
-class Layout extends React.Component {
+export class Layout extends React.Component {
   constructor(props) {
     super(props);
     this.logOut = this.logOut.bind(this);

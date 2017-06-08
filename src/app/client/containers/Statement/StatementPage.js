@@ -37,7 +37,8 @@ StatementPage.propTypes = {
   loading: PropTypes.bool,
   bank: PropTypes.object,
   showMore: PropTypes.func,
-  transactions: PropTypes.array
+  transactions: PropTypes.object,
+  getTransactions: PropTypes.func
 };
 
 const mapStateToProps = (state) => {
@@ -54,7 +55,7 @@ const mapDispatchToProps = (dispatch) => {
   return {
     getTransactions: () => {
       dispatch(getTransactions()).then((response) => {
-        let data = response.payload.data ? response.payload.data.transactions : {data : 'Network Error'};
+        let data = response.payload.data ? response.payload.data.transactions : [{errors: {data : 'Network Error'}}];
 
         !response.error ? dispatch(getTransactionsSuccess(data)) : dispatch(getTransactionsFail(data));
       });

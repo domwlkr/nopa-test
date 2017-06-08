@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 import {connect} from 'react-redux';
 import { Layout, LoginForm } from '../../components';
 import { formSubmitSuccess } from '../../redux/actions/formActions';
 import { browserHistory } from 'react-router';
 
-class LoginPage extends React.Component {
+export class LoginPage extends React.Component {
   constructor(props) {
     super(props);
 
@@ -21,10 +21,6 @@ class LoginPage extends React.Component {
 
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleChange = this.handleChange.bind(this);
-  }
-
-  componentWillMount() {
-    if (this.props.bank.name === undefined) browserHistory.push('/choose-bank');
   }
 
   handleChange(e) {
@@ -94,6 +90,11 @@ class LoginPage extends React.Component {
     );  
   }
 }
+
+LoginPage.propTypes = {
+  formSubmit: PropTypes.func,
+  bank: PropTypes.object
+};
 
 const mapStateToProps = (state) => {
   return {

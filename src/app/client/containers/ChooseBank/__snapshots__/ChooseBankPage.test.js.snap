@@ -1,13 +1,174 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Renders correctly 1`] = `
-<div>
-  <div />
+<section
+  className={undefined}
+>
   <div
-    className="main-content"
+    className="header"
   >
-    asdsssss
+    <img
+      className="logo"
+      src="test-file-stub"
+    />
+    <div
+      className="login"
+    >
+      <a
+        className="button"
+        onClick={[Function]}
+        style={Object {}}
+      >
+        Log In
+      </a>
+    </div>
   </div>
-  <div />
-</div>
+  <div
+    className="layout"
+  >
+    <div
+      className="main-content"
+    >
+      <h1>
+        Which bank does this account belong to?
+      </h1>
+      <p>
+        Track all of your payments by connecting as many bank accounts as you'd like to your Nopa account and get updates on your balance instantly.
+      </p>
+      <ul
+        className="bank-list"
+      >
+        <li
+          className="bank-item "
+          onClick={[Function]}
+        >
+          <img
+            alt="Barclays"
+            className="bank-image"
+            src="test-file-stub"
+          />
+        </li>
+        <li
+          className="bank-item "
+          onClick={[Function]}
+        >
+          <img
+            alt="Natwest"
+            className="bank-image"
+            src="test-file-stub"
+          />
+        </li>
+        <li
+          className="bank-item "
+          onClick={[Function]}
+        >
+          <img
+            alt="Lloyds"
+            className="bank-image"
+            src="test-file-stub"
+          />
+        </li>
+        <li
+          className="bank-item "
+          onClick={[Function]}
+        >
+          <img
+            alt="HSBC"
+            className="bank-image"
+            src="test-file-stub"
+          />
+        </li>
+        <li
+          className="bank-item "
+          onClick={[Function]}
+        >
+          <img
+            alt="TSB"
+            className="bank-image"
+            src="test-file-stub"
+          />
+        </li>
+        <li
+          className="bank-item "
+          onClick={[Function]}
+        >
+          <img
+            alt="Santander"
+            className="bank-image"
+            src="test-file-stub"
+          />
+        </li>
+      </ul>
+      <div
+        className="error"
+      >
+        
+      </div>
+      <a
+        className="button"
+        onClick={[Function]}
+        style={Object {}}
+      >
+        Continue
+      </a>
+    </div>
+  </div>
+  <section
+    className="partners"
+  >
+    <div>
+      <div>
+        <span>
+          Our partners:
+        </span>
+      </div>
+      <div>
+        <div
+          className="partner"
+        >
+          <img
+            alt="Airbnb"
+            src="test-file-stub"
+          />
+        </div>
+        <div
+          className="partner"
+        >
+          <img
+            alt="Metro"
+            src="test-file-stub"
+          />
+        </div>
+        <div
+          className="partner"
+        >
+          <img
+            alt="Pariti"
+            src="test-file-stub"
+          />
+        </div>
+        <div
+          className="partner"
+        >
+          <img
+            alt="Unshackled"
+            src="test-file-stub"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer
+    className="footer"
+  >
+    <div>
+      <p>
+        © Nopa Limited 2017 All rights reserved. ‘Nopa’ and the Nopa logo are trade marks of Nopa Limited. Nopa is a member of CIFAS - the UK's leading anti-fraud association, and we are registered with the Office of the Information Commissioner (No. Z879078).
+      </p>
+      <p>
+        Nopa Limited is incorporated in England & Wales (registration number 05197592), with its registered office at 1st Floor, Cottons Centre, Tooley Street, London, SE1 2QG. Nopa Limited is authorised and regulated by the Financial Conduct Authority, and entered on the Financial Services Register under firm registration number 563134.
+      </p>
+    </div>
+  </footer>
+</section>
 `;

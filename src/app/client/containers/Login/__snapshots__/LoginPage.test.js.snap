@@ -1,11 +1,209 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Renders correctly 1`] = `
-<div>
-  <div />
+<section
+  className={undefined}
+>
   <div
-    className="main-content"
-  />
-  <div />
-</div>
+    className="header"
+  >
+    <img
+      className="logo"
+      src="test-file-stub"
+    />
+    <div
+      className="login"
+    >
+      <a
+        className="button"
+        onClick={[Function]}
+        style={Object {}}
+      >
+        Log In
+      </a>
+    </div>
+  </div>
+  <div
+    className="layout"
+  >
+    <div
+      className="main-content"
+    >
+      <h1>
+        Which bank does this account belong to?
+      </h1>
+      <p>
+        Track all of your payments by connecting as many bank accounts as you'd
+        <br />
+        like to your Nopa account and get updates on your balance instantly. Plus it's free.
+      </p>
+      <form
+        onSubmit={[Function]}
+      >
+        <div
+          className="form-input"
+        >
+          <label
+            htmlFor="surname"
+          >
+            Surname
+          </label>
+          <input
+            data-error={undefined}
+            id="surname"
+            name="surname"
+            onChange={[Function]}
+            placeholder="Surname"
+            type="text"
+          />
+          <div
+            className="errors"
+          />
+        </div>
+        <div
+          className="form-input"
+        >
+          <label
+            htmlFor="sortCode"
+          >
+            Sort code
+          </label>
+          <input
+            data-error={undefined}
+            id="sortCode"
+            name="sortCode"
+            onChange={[Function]}
+            placeholder="Sort code"
+            type="text"
+          />
+          <div
+            className="errors"
+          />
+        </div>
+        <div
+          className="form-input"
+        >
+          <label
+            htmlFor="accountNumber"
+          >
+            Account number
+          </label>
+          <input
+            data-error={undefined}
+            id="accountNumber"
+            name="accountNumber"
+            onChange={[Function]}
+            placeholder="Account number"
+            type="text"
+          />
+          <div
+            className="errors"
+          />
+        </div>
+        <div
+          className="form-input"
+        >
+          <label
+            htmlFor="passCode"
+          >
+            Passode
+          </label>
+          <input
+            data-error={undefined}
+            id="passCode"
+            name="passCode"
+            onChange={[Function]}
+            placeholder="Passode"
+            type="text"
+          />
+          <div
+            className="errors"
+          />
+        </div>
+        <div
+          className="form-input"
+        >
+          <label
+            htmlFor="memorableWord"
+          >
+            Memorable word
+          </label>
+          <input
+            data-error={undefined}
+            id="memorableWord"
+            name="memorableWord"
+            onChange={[Function]}
+            placeholder="Memorable word"
+            type="text"
+          />
+          <div
+            className="errors"
+          />
+        </div>
+        <input
+          className="button"
+          type="submit"
+          value="Login & connect"
+        />
+      </form>
+    </div>
+  </div>
+  <section
+    className="partners"
+  >
+    <div>
+      <div>
+        <span>
+          Our partners:
+        </span>
+      </div>
+      <div>
+        <div
+          className="partner"
+        >
+          <img
+            alt="Airbnb"
+            src="test-file-stub"
+          />
+        </div>
+        <div
+          className="partner"
+        >
+          <img
+            alt="Metro"
+            src="test-file-stub"
+          />
+        </div>
+        <div
+          className="partner"
+        >
+          <img
+            alt="Pariti"
+            src="test-file-stub"
+          />
+        </div>
+        <div
+          className="partner"
+        >
+          <img
+            alt="Unshackled"
+            src="test-file-stub"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer
+    className="footer"
+  >
+    <div>
+      <p>
+        © Nopa Limited 2017 All rights reserved. ‘Nopa’ and the Nopa logo are trade marks of Nopa Limited. Nopa is a member of CIFAS - the UK's leading anti-fraud association, and we are registered with the Office of the Information Commissioner (No. Z879078).
+      </p>
+      <p>
+        Nopa Limited is incorporated in England & Wales (registration number 05197592), with its registered office at 1st Floor, Cottons Centre, Tooley Street, London, SE1 2QG. Nopa Limited is authorised and regulated by the Financial Conduct Authority, and entered on the Financial Services Register under firm registration number 563134.
+      </p>
+    </div>
+  </footer>
+</section>
 `;

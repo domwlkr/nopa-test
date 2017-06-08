@@ -12,7 +12,7 @@ const errors = {
   }
 };
 
-class ErrorPage extends React.Component {
+export class ErrorPage extends React.Component {
 
   constructor(props) {
     super(props);
@@ -31,7 +31,7 @@ class ErrorPage extends React.Component {
 
   render () {
     return (
-      <Layout>
+      <Layout title="Error">
         {this.printError(this.props.route.error)}
       </Layout>
     );
