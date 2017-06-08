@@ -24,7 +24,7 @@ const TransactionsTable = (props) => {
 
   return (
     <div className="table-wrap">
-      <span>Your transactions for the last 30 days</span>
+      <p>Your transactions for the last 30 days</p>
       <div className="transactions-table">
         {transactionDatesBlocks}
       </div>

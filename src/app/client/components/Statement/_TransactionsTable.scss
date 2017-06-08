@@ -3,13 +3,9 @@
   max-width: 505px;
   margin: 0 auto 30px;
 
-  span {
+  p {
     color: white;
   }
-}
-
-.transactions-table {
-
 }
 
 @include media(380px) {

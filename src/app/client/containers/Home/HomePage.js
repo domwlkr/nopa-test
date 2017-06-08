@@ -4,7 +4,7 @@ import { Link } from 'react-router';
 
 const HomePage = (props) => {
   return (
-    <Layout title="Welcome to Nopa!">
+    <Layout routeClass="home" title="Welcome to Nopa!">
       <HomeIntro />
       <HomeSecondary />
     </Layout>

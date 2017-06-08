@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {PropTypes} from 'react';
 import { connect } from 'react-redux';
 import { logoutSuccess } from '../../redux/actions/formActions';
 import { Header, Footer, Partners } from '../';
@@ -21,7 +21,7 @@ class Layout extends React.Component {
 
   render () {
     return (
-      <section>
+      <section className={this.props.routeClass}>
         <Header loggedIn={this.props.loggedIn}
           bank={this.props.bank}
           onLogoutClick={this.logOut} />
@@ -36,7 +36,11 @@ class Layout extends React.Component {
 }
 
 Layout.propTypes = {
-  title: React.PropTypes.string.isRequired
+  title: React.PropTypes.string.isRequired,
+  routeClass: React.PropTypes.string,
+  loggedIn: PropTypes.bool.isRequired,
+  bank: PropTypes.object.isRequired,
+  logout: PropTypes.func.isRequired
 };
 
 const mapStateToProps = (state) => {

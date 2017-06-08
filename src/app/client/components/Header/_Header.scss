@@ -17,14 +17,18 @@
   .header {
     background-color: transparent;
     margin: 10px;
-    flex-direction: row-reverse;
-
-    .logo {
-      display: none;
-    }
+    flex-direction: row;
 
     .login {
       align-self: flex-end;
+    }
+
+    .home & {
+      flex-direction: row-reverse;
+
+      .logo {
+        display: none;
+      }
     }
   }
 }
