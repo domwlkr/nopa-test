@@ -3,7 +3,6 @@ import Layout from './Layout';
 import { Provider } from 'react-redux';
 import configureStore from '../../redux/store/configureStore';
 import renderer from 'react-test-renderer';
-import { shallow } from 'enzyme';
 
 const title = "Title";
 const routeClass = "home";

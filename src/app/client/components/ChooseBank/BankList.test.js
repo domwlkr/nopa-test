@@ -4,9 +4,7 @@ import initialState from '../../redux/reducers/initialState.js';
 import renderer from 'react-test-renderer';
 
 const bankList = initialState.bankList;
-
 const onSelectBank = jest.fn();
-
 const selectedBank = {
   name: 'Barclays',
   logo: 'test-file-stub'

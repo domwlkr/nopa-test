@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {PropTypes} from 'react';
 import { TextInput } from '../';
 
 const LoginForm = (props) => {
@@ -41,9 +41,9 @@ const LoginForm = (props) => {
 };
 
 LoginForm.propTypes = {
-  handleSubmit: React.PropTypes.func.isRequired,
-  handleChange: React.PropTypes.func.isRequired,
-  errors: React.PropTypes.object
+  handleSubmit: PropTypes.func.isRequired,
+  handleChange: PropTypes.func.isRequired,
+  errors: PropTypes.object
 };
 
 export default LoginForm;

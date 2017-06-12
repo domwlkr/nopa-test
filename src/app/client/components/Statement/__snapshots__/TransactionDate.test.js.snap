@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders correctly 1`] = `
+<div
+  className="transaction-date-wrap"
+>
+  <div
+    className="transaction-date"
+  >
+    Today
+  </div>
+  <div
+    className="transaction"
+  >
+    <span>
+      PAYPAL ZARA
+    </span>
+    <span>
+      - £35.98
+    </span>
+  </div>
+</div>
+`;

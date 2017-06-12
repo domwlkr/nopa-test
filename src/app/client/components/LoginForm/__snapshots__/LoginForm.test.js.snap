@@ -1,0 +1,113 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders correctly 1`] = `
+<form
+  onSubmit={[Function]}
+>
+  <div
+    className="form-input"
+  >
+    <label
+      htmlFor="surname"
+    >
+      Surname
+    </label>
+    <input
+      data-error={undefined}
+      id="surname"
+      name="surname"
+      onChange={[Function]}
+      placeholder="Surname"
+      type="text"
+    />
+    <div
+      className="errors"
+    />
+  </div>
+  <div
+    className="form-input"
+  >
+    <label
+      htmlFor="sortCode"
+    >
+      Sort code
+    </label>
+    <input
+      data-error={undefined}
+      id="sortCode"
+      name="sortCode"
+      onChange={[Function]}
+      placeholder="Sort code"
+      type="text"
+    />
+    <div
+      className="errors"
+    />
+  </div>
+  <div
+    className="form-input"
+  >
+    <label
+      htmlFor="accountNumber"
+    >
+      Account number
+    </label>
+    <input
+      data-error={undefined}
+      id="accountNumber"
+      name="accountNumber"
+      onChange={[Function]}
+      placeholder="Account number"
+      type="text"
+    />
+    <div
+      className="errors"
+    />
+  </div>
+  <div
+    className="form-input"
+  >
+    <label
+      htmlFor="passCode"
+    >
+      Passode
+    </label>
+    <input
+      data-error={undefined}
+      id="passCode"
+      name="passCode"
+      onChange={[Function]}
+      placeholder="Passode"
+      type="text"
+    />
+    <div
+      className="errors"
+    />
+  </div>
+  <div
+    className="form-input"
+  >
+    <label
+      htmlFor="memorableWord"
+    >
+      Memorable word
+    </label>
+    <input
+      data-error={undefined}
+      id="memorableWord"
+      name="memorableWord"
+      onChange={[Function]}
+      placeholder="Memorable word"
+      type="text"
+    />
+    <div
+      className="errors"
+    />
+  </div>
+  <input
+    className="button"
+    type="submit"
+    value="Login & connect"
+  />
+</form>
+`;

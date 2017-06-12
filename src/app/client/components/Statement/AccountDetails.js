@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {PropTypes} from 'react';
 
 const AccountDetails = (props) => {
   return (
@@ -14,6 +14,11 @@ const AccountDetails = (props) => {
       </div>
     </div>
   );
+};
+
+AccountDetails.propTypes = {
+  accountDetails: PropTypes.object,
+  bank: PropTypes.object
 };
 
 export default AccountDetails;

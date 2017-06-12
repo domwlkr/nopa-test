@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders correctly 1`] = `
+<div
+  className="main-content"
+>
+  <div
+    className="account-details"
+  >
+    <div
+      className="account-details__left"
+    >
+      <span>
+        Barclays
+      </span>
+      <span>
+        Walker
+      </span>
+    </div>
+    <div
+      className="account-details__right"
+    >
+      <span>
+        Current account
+      </span>
+      <span>
+        90909090
+      </span>
+      <span>
+        220099
+      </span>
+    </div>
+  </div>
+  <div
+    className="table-wrap"
+  >
+    <p>
+      Your transactions for the last 30 days
+    </p>
+    <div
+      className="transactions-table"
+    />
+  </div>
+  <a
+    className="button"
+    onClick={[Function]}
+    style={Object {}}
+  >
+    Show more
+  </a>
+</div>
+`;

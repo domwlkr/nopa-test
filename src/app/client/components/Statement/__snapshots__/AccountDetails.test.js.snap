@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders correctly 1`] = `
+<div
+  className="account-details"
+>
+  <div
+    className="account-details__left"
+  >
+    <span>
+      Barclays
+    </span>
+    <span>
+      Walker
+    </span>
+  </div>
+  <div
+    className="account-details__right"
+  >
+    <span>
+      Current account
+    </span>
+    <span>
+      90909090
+    </span>
+    <span>
+      220099
+    </span>
+  </div>
+</div>
+`;

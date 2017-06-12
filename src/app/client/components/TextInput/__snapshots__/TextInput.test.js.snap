@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders correctly 1`] = `
+<div
+  className="form-input"
+>
+  <label
+    htmlFor="surname"
+  >
+    Surname
+  </label>
+  <input
+    data-error={undefined}
+    id="surname"
+    name="surname"
+    onChange={[Function]}
+    placeholder="Surname"
+    type="text"
+  />
+  <div
+    className="errors"
+  />
+</div>
+`;

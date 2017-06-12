@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders correctly 1`] = `
+<section
+  className="partners"
+>
+  <div>
+    <div>
+      <span>
+        Our partners:
+      </span>
+    </div>
+    <div>
+      <div
+        className="partner"
+      >
+        <img
+          alt="Airbnb"
+          src="test-file-stub"
+        />
+      </div>
+      <div
+        className="partner"
+      >
+        <img
+          alt="Metro"
+          src="test-file-stub"
+        />
+      </div>
+      <div
+        className="partner"
+      >
+        <img
+          alt="Pariti"
+          src="test-file-stub"
+        />
+      </div>
+      <div
+        className="partner"
+      >
+        <img
+          alt="Unshackled"
+          src="test-file-stub"
+        />
+      </div>
+    </div>
+  </div>
+</section>
+`;
