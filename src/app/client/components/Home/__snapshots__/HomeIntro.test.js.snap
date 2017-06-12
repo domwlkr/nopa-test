@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders correctly 1`] = `
+<div
+  className="main-content home-intro"
+>
+  <div
+    className="logo"
+  >
+    <img
+      alt="Logo"
+      className="Nopa"
+      src="test-file-stub"
+    />
+  </div>
+  <h1>
+    Your finances, in one place
+  </h1>
+  <p>
+    Track all of your payments by connecting as many bank accounts as you'd like to your Nopa account and get updates on your balance instantly.
+  </p>
+  <a
+    className="button"
+    onClick={[Function]}
+    style={Object {}}
+  >
+    Get started
+  </a>
+</div>
+`;

@@ -1,0 +1,90 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders correctly 1`] = `
+<div
+  className="main-content"
+>
+  <h1>
+    Which bank does this account belong to?
+  </h1>
+  <p>
+    Track all of your payments by connecting as many bank accounts as you'd like to your Nopa account and get updates on your balance instantly.
+  </p>
+  <ul
+    className="bank-list"
+  >
+    <li
+      className="bank-item "
+      onClick={[Function]}
+    >
+      <img
+        alt="Barclays"
+        className="bank-image"
+        src="test-file-stub"
+      />
+    </li>
+    <li
+      className="bank-item "
+      onClick={[Function]}
+    >
+      <img
+        alt="Natwest"
+        className="bank-image"
+        src="test-file-stub"
+      />
+    </li>
+    <li
+      className="bank-item "
+      onClick={[Function]}
+    >
+      <img
+        alt="Lloyds"
+        className="bank-image"
+        src="test-file-stub"
+      />
+    </li>
+    <li
+      className="bank-item "
+      onClick={[Function]}
+    >
+      <img
+        alt="HSBC"
+        className="bank-image"
+        src="test-file-stub"
+      />
+    </li>
+    <li
+      className="bank-item "
+      onClick={[Function]}
+    >
+      <img
+        alt="TSB"
+        className="bank-image"
+        src="test-file-stub"
+      />
+    </li>
+    <li
+      className="bank-item "
+      onClick={[Function]}
+    >
+      <img
+        alt="Santander"
+        className="bank-image"
+        src="test-file-stub"
+      />
+    </li>
+  </ul>
+  <div
+    className="error"
+  >
+    Error message
+  </div>
+  <a
+    className="button"
+    onClick={[Function]}
+    style={Object {}}
+  >
+    Continue
+  </a>
+</div>
+`;

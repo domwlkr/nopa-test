@@ -8,7 +8,7 @@ const BankItem = (props) => {
   );
 };
 
-BankItem.proptypes = {
+BankItem.propTypes = {
   bank: PropTypes.object.isRequired,
   onSelectBank: PropTypes.func.isRequired
 };

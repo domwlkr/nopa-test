@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 import { Button } from '../index';
 import initialState from '../../redux/reducers/initialState.js';
 import * as Paths from '../../constants/paths';
@@ -20,6 +20,14 @@ const ChooseBankContent = (props) => {
 
     </div>
   );
+};
+
+ChooseBankContent.propTypes = {
+  bankList: PropTypes.array.isRequired,
+  onSelectBank: PropTypes.func.isRequired,
+  selectedBank: PropTypes.object.isRequired,
+  error: PropTypes.string.isRequired,
+  onContinue: PropTypes.func.isRequired
 };
 
 export default ChooseBankContent;

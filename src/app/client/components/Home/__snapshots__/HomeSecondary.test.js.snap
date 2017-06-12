@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders correctly 1`] = `
+<div
+  className="secondary-content home-secondary"
+>
+  <div>
+    <div>
+      <h2>
+        There's no such things as "one size fits all" finance.
+      </h2>
+      <p>
+        We were founded to make money simple and fair for everyone: whether you're looking for a loan, or to get better rewards for your investments.
+      </p>
+    </div>
+    <div>
+      <img
+        alt="Shapes"
+        className="shapes"
+        src="test-file-stub"
+      />
+    </div>
+  </div>
+</div>
+`;

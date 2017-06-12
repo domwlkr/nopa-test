@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders correctly 1`] = `
+<div
+  className="header"
+>
+  <img
+    className="logo"
+    src="test-file-stub"
+  />
+  <div
+    className="login"
+  >
+    <a
+      className="button"
+      onClick={[Function]}
+      style={Object {}}
+    >
+      Log Out
+    </a>
+  </div>
+</div>
+`;
